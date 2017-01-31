@@ -1,0 +1,23 @@
+<style>
+.template{
+    background:#fff;
+    color:#778899;
+    height:100%
+}    
+</style>
+<div class="container-fluid template">
+<div class="col-md-12">
+    <div class="text-center">
+        <h1>This is a demo template...</h1>
+    </div>
+</div>
+</div>
+<script>
+    require(['jquery','Debugger'],function($,Debugger){
+        $(document).ready(function(){            
+           setInterval(function(){
+               $('.text-center').toggle();
+           },500)
+        })
+    })
+</script>

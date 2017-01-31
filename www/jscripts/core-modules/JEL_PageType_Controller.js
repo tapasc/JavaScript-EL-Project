@@ -17,8 +17,9 @@ define(
      var currentTemplateObject=null;
      var currentModuleTotalTopics=0;
      var currentTopicsTotalpages=0;
-
-        
+     var app = null;
+     var $ = null;
+     var Debugger = null;   
 
      var currentPageTemplate='';
      var currentModuleTitle = '';
@@ -26,17 +27,23 @@ define(
 
 
      pageTypeController._initialize = function(data,returnCallback){
+         app = require('app');
+         $ = require('jquery');
+         Debugger = require('Debugger');
+
          courseData = data;
          //console.log(courseData.modules[0]);
          currentModuleObject = courseData.modules[currentModuleIndex];
          currentModuleTotalTopics = courseData.modules[currentModuleIndex].module[2].topics.length;
          currentTopicsTotalpages  = courseData.modules[currentModuleIndex].module[2].topics[currentTopicIndex].topic[2].pages.length
          currentTemplateObject    = courseData.modules[currentModuleIndex].module[2].topics[currentTopicIndex].topic[2].pages[currentPageIndex]
-         console.log(currentTemplateObject);
+        
          
          returnCallback();
      }  
 
-
+     pageTypeController.loadStartPage = function(){         
+         app.loadPage(currentTemplateObject);
+     }
      return pageTypeController; 
 });

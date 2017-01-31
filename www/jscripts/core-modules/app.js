@@ -128,7 +128,7 @@ define([
         JEL_Content_Controller._initialize($(mainViewElem).find(".JEL_Content_Wrapper"));
         JEL_Navigation_Controller._initialize($(mainViewElem).find(".JEL_Navigation_Wrapper"));
         
-        loadPage('demo_template');
+        loadStartPage();
 
     }
 
@@ -149,6 +149,10 @@ define([
          *  **/
     }
 
+    loadStartPage = function(){
+        JEL_PageType_Controller.loadStartPage();
+    }
+
     app.loadNextPage = function () {
 
     }
@@ -156,8 +160,11 @@ define([
 
     }
 
-    loadPage = function (templatepath) {
-        JEL_Content_Controller.loadPage(templatepath);
+
+
+    app.loadPage = function (currentTemplateObject) {
+        JEL_Content_Controller.loadPage(currentTemplateObject);
+        //JEL_Header_Controller.update();
     }
 
     app.onPageLoadComplete = function(){

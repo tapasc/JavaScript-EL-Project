@@ -9,7 +9,7 @@ define(['jquery','Debugger','app'],function($,Debugger,app){
 
     JEL_Header_Controller._initialize = function(elem){
         app = require('app');
-        //$ = require('$');
+        $ = require('jquery');
         Debugger = require('Debugger');
 
 
@@ -23,5 +23,11 @@ define(['jquery','Debugger','app'],function($,Debugger,app){
         Debugger.log('App = ='+app);
     }
 
+    JEL_Header_Controller.updateModuleTitle = function (){
+        
+    }
+    JEL_Header_Controller.updateTopicTitle = function (){
+        
+    }
     return JEL_Header_Controller;
 })

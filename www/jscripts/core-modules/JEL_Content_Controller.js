@@ -13,10 +13,9 @@ define(['jquery','Debugger','app'],function($,Debugger,app){
 
     JEL_Content_Controller.loadPage = function(param){
         Debugger.info('template load called');
-
-        $(contentElem).load("jscripts/templates/"+param+".html",function(){           
-                app.onPageLoadComplete();
-                Debugger.info('template loaded..1');
+       
+        $(contentElem).load("jscripts/templates/"+param.id+".html",function(){           
+                app.onPageLoadComplete();               
         });
     }    
     
