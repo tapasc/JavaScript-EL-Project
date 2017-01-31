@@ -1,0 +1,21 @@
+.JEL_Main_Wrapper{
+    margin: 0 auto;
+    height:712px;
+    width:1028px;
+    background:#fff;
+}
+.JEL_Main_Wrapper .JEL_Header_Wrapper{
+    height:98px;
+    width:100%;
+    background:#fff url("../assets/images/wrapper_images/header2.png") no-repeat;
+}
+.JEL_Main_Wrapper .JEL_Content_Wrapper{
+    height:531px;
+    width:100%;
+    background:#fff;
+}
+.JEL_Main_Wrapper .JEL_Navigation_Wrapper{
+    height:83px;
+    width:100%;
+    background:lightslategray;
+}
