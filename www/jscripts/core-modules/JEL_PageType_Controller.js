@@ -45,5 +45,12 @@ define(
      pageTypeController.loadStartPage = function(){         
          app.loadPage(currentTemplateObject);
      }
+     pageTypeController.loadNextPage = function(){
+         alert('controller next');
+     }
+     pageTypeController.loadPreviousPage = function(){
+         alert('controller previous');
+     }
+     
      return pageTypeController; 
 });

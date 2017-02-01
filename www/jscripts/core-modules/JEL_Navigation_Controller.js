@@ -11,8 +11,15 @@ define(['jquery','app','Debugger'],function($,app,Debugger){
         app = require('app');
 
         navigationElem = $(elem);
+        $(navigationElem).find('#next_btn').click(onNext);
+        $(navigationElem).find('#back_btn').click(onPrevious);       
     }
-
+    onNext = function(){
+       app.loadNextPage();
+    }
+    onPrevious = function(){
+         app.loadPreviousPage();
+    }    
     updateNavigation = function(){
 
     }

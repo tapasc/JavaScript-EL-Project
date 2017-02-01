@@ -154,10 +154,10 @@ define([
     }
 
     app.loadNextPage = function () {
-
+        JEL_PageType_Controller.loadNextPage();
     }
     app.loadPreviousPage = function () {
-
+        JEL_PageType_Controller.loadPreviousPage();
     }
 
 

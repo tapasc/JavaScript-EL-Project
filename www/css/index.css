@@ -17,5 +17,31 @@
 .JEL_Main_Wrapper .JEL_Navigation_Wrapper{
     height:83px;
     width:100%;
-    background:lightslategray;
+    background:#fff;
 }
+.nextBtn_normal{
+    background:url("../assets/images/wrapper_images/next_normal.png") no-repeat 0 0;
+    background-size: 70px 70px;
+    width:70px;
+    height:70px;
+    cursor:pointer;
+}
+/*.nextBtn_normal:hover{
+    background:url("../assets/images/wrapper_images/P1_Splash_mover.png") no-repeat 0 0;
+    background-size: 70px 70px;
+    width:70px;
+    height:70px;    
+}*/
+.backBtn_normal{
+    background:url("../assets/images/wrapper_images/back_normal.png") no-repeat 0 0;
+    background-size: 70px 70px;
+    width:70px;
+    height:70px;
+    cursor:pointer;
+}
+/*.backBtn_normal:hover{
+    background:url("../assets/images/wrapper_images/P1_Splash_mover.png") no-repeat 0 0;
+    background-size: 70px 70px;
+    width:70px;
+    height:70px;    
+}*/
