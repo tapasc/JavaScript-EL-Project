@@ -46,11 +46,28 @@ define(
          app.loadPage(currentTemplateObject);
      }
      pageTypeController.loadNextPage = function(){
-         alert('controller next');
+        
+        /*** If current topic has more pages to navigate next ***/
+         if(parseInt(currentTopicsTotalpages) > currentPageIndex){
+             /** Increament currentPageIndex */
+             currentPageIndex = currentPageIndex+1;
+             getNextPage(currentModuleIndex,currentTopicIndex,currentPageIndex);             
+         }
+
+         /*** If this is the last Page of the topic than go to next Module ***/
+         if(parseInt(currentTopicsTotalpages) == currentPageIndex){
+             /** Increament currentPageIndex */
+             currentPageIndex = 0;
+             currentModuleIndex = currentModuleIndex+1;             
+             getNextPage(currentModuleIndex,currentModuleIndex,currentPageIndex);             
+         }         
      }
      pageTypeController.loadPreviousPage = function(){
          alert('controller previous');
      }
      
+     getNextPage = function(m,t,p){
+         console.log(courseData.modules[m].module[2].topics[t].topic[2].pages[p].id)
+     }
      return pageTypeController; 
 });
