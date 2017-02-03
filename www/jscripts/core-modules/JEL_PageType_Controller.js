@@ -163,7 +163,7 @@ define([
         /**------------------------------***------------------------------------ */
     }
 
-    getPage = function (_m, _t, _p) {
+    getPage = function (_m, _t, _p){
         updateCurrentData();
         console.log(courseData.modules[_m].module[2].topics[_t].topic[2].pages[_p])
     }
